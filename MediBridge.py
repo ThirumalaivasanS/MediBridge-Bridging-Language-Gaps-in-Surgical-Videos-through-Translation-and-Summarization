@@ -44,7 +44,7 @@ def process_youtube_video(video_url):
 
             if language != 'en':
                 translator = Translator()
-                text = translator.translate(text, src=language, dest='en').text
+                text = translator.translate(text, src=language, dest='ja').text
 
             # Summarize using the BART model
             inputs = tokenizer.encode("summarize: " + text, return_tensors="pt", max_length=1024, truncation=True)
